@@ -16,10 +16,10 @@ pipeline {
       }
     }
 
-    stage('Terraform Apply') {
+    stage('Terraform Plan') {
       steps {
         dir('terraform/oci-instances') {
-          sh 'terraform apply -auto-approve'
+          sh 'terraform plan -auto-approve'
         }
       }
     }
