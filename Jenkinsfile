@@ -19,7 +19,7 @@ pipeline {
     stage('Terraform Plan') {
       steps {
         dir('list-instances') {
-          sh 'terraform plan -auto-approve'
+          sh 'terraform plan'
         }
       }
     }
