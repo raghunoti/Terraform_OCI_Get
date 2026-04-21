@@ -19,7 +19,7 @@ pipeline {
     stage('Terraform Plan') {
       steps {
         dir('terraform/oci-instances') {
-          sh 'terraform plan -auto-approve'
+          sh 'terraform plan'
         }
       }
     }
