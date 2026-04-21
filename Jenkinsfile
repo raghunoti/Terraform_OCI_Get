@@ -2,12 +2,12 @@ pipeline {
   agent any
 
   environment {
-    TF_VAR_tenancy_ocid     = credentials('oci-tenancy-ocid')
-    TF_VAR_user_ocid        = credentials('oci-user-ocid')
-    TF_VAR_fingerprint      = credentials('oci-fingerprint')
-    TF_VAR_private_key_path = credentials('oci-private-key-file')
+    TF_VAR_tenancy_ocid     = credentials('tenancy_ocid')
+    TF_VAR_user_ocid        = credentials('user_ocid')
+    TF_VAR_fingerprint      = credentials('fingerprint')
+    TF_VAR_private_key_path = credentials('private_key')
     TF_VAR_region           = credentials('region')
-    TF_VAR_compartment_ocid = credentials('oci-compartment-ocid')
+    TF_VAR_compartment_ocid = credentials('compartment_ocid')
   }
 
   stages {
