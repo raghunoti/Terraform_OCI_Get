@@ -32,5 +32,13 @@ pipeline {
         }
       }
     }
+
+    stage('Terraform Output (JSON)') {
+      steps {
+	sh '''
+	  terraform output -json
+	  '''
+	}
+    }
   }
 }
